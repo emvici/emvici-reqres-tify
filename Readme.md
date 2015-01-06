@@ -30,10 +30,4 @@ app.use( require( 'emvici-reqres-tify' )() );
 
 #### Express
 
-```js
-var express = require( 'express' ),
-    app = express();
-
-app.use( require( 'emvici-reqres-tify' )() );
-
-```
+This is based on [express](https://github.com/strongloop/express/), if you use it you won't need this! :)
