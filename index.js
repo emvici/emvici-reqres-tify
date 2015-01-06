@@ -1,2 +1,5 @@
+var ReqResIfy = require('./lib/reqres-ify');
 
-module.exports = require('./lib/express');
+module.exports = function ( options ) {
+    return new ReqResIfy( options );
+};
