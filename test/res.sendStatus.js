@@ -1,6 +1,6 @@
 
 var assert = require('assert')
-var express = require('..')
+var express = require( './.fake.express' )
 var request = require('supertest')
 
 describe('res', function () {

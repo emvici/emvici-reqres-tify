@@ -1,5 +1,5 @@
-var ReqResIfy = require('./lib/reqres-ify');
+var ReqResTify = require('./lib/reqres-tify');
 
-module.exports = function ( options ) {
-    return new ReqResIfy( options );
+module.exports = function ( settings ) {
+    return new ReqResTify( settings );
 };

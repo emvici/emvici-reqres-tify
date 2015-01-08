@@ -1,5 +1,5 @@
 
-var express = require('../')
+var express = require( './.fake.express' )
   , request = require('supertest')
   , cookie = require('cookie')
   , cookieParser = require('cookie-parser')

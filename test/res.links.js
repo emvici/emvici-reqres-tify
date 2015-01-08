@@ -1,5 +1,5 @@
 
-var express = require('../')
+var express = require( './.fake.express' )
   , res = express.response;
 
 describe('res', function(){

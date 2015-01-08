@@ -1,6 +1,6 @@
 
 var after = require('after');
-var express = require('../')
+var express = require( './.fake.express' )
   , request = require('supertest')
   , assert = require('assert');
 var onFinished = require('on-finished');

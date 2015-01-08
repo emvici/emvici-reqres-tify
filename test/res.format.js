@@ -1,5 +1,5 @@
 
-var express = require('../')
+var express = require( './.fake.express' )
   , request = require('supertest')
   , utils = require('../lib/utils')
   , assert = require('assert');
@@ -53,20 +53,6 @@ app3.use(function(req, res, next){
   })
 });
 
-var app4 = express();
-
-app4.get('/', function(req, res, next){
-  res.format({
-    text: function(){ res.send('hey') },
-    html: function(){ res.send('<p>hey</p>') },
-    json: function(){ res.send({ message: 'hey' }) }
-  });
-});
-
-app4.use(function(err, req, res, next){
-  res.send(err.status, 'Supports: ' + err.types.join(', '));
-})
-
 describe('res', function(){
   describe('.format(obj)', function(){
     describe('with canonicalized mime types', function(){
@@ -104,30 +90,6 @@ describe('res', function(){
       })
     })
 
-    describe('in router', function(){
-      test(app4);
-    })
-
-    describe('in router', function(){
-      var app = express();
-      var router = express.Router();
-
-      router.get('/', function(req, res, next){
-        res.format({
-          text: function(){ res.send('hey') },
-          html: function(){ res.send('<p>hey</p>') },
-          json: function(){ res.send({ message: 'hey' }) }
-        });
-      });
-
-      router.use(function(err, req, res, next){
-        res.send(err.status, 'Supports: ' + err.types.join(', '));
-      })
-
-      app.use(router)
-
-      test(app)
-    })
   })
 })
 
