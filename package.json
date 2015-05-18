@@ -1,6 +1,6 @@
 {
   "name": "emvici-reqres-tify",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "emvici request/response prototype applier and middleware",
   "main": "index.js",
   "scripts": {
